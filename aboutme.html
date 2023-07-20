@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+    :root {
+  --color-black-1: #000000;
+  --color-black-2: #282a3a;
+  --color-brown-1: #735f32;
+  --color-brown-2: #c69749;
+  --color-white: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color-scheme: dark light;
+}
+@media only screen and (max-width: 31.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-black-2);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(120rem, 100%);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  background-color: var(--color-brown-1);
+  font-size: 1.6rem;
+  padding: 1.5rem;
+}
+.header__menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 4rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .header__menu {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+.header__link:link, .header__link:visited {
+  color: var(--color-white);
+  text-decoration: none;
+  background-color: var(--color-brown-2);
+  padding: 0.5rem 2rem;
+  border-radius: 100rem;
+  transition: opacity 0.2s;
+  display: inline-block;
+}
+.header__link:hover, .header__link:active {
+  opacity: 0.75;
+}
+
+.main {
+  background-color: var(--color-black-1);
+}
+.main__interest-box {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.main__interest-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  align-items: center;
+}
+.main__interest {
+  width: 25rem;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.main__interest:hover {
+  color: #735f32;
+  scale: 1.05;
+}
+.main__interest-icon {
+  width: 4rem;
+  height: 4rem;
+}
+.main__interest-img {
+  height: 100%;
+}
+.main__line-design {
+  height: 0.3rem;
+  width: 12rem;
+  background-color: #ffffff;
+}
+.main__about {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.main__about-personal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 50em) {
+  .main__about-personal {
+    flex-direction: column;
+  }
+}
+.main__about-text {
+  width: 45%;
+}
+@media only screen and (max-width: 50em) {
+  .main__about-text {
+    width: 100%;
+  }
+}
+.main__about-photo {
+  width: 45%;
+}
+@media only screen and (max-width: 50em) {
+  .main__about-photo {
+    width: 100%;
+  }
+}
+.main__about-list {
+  margin-left: 1.8rem;
+}
+.main__about-personal-box {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.main__about-personal-p {
+  font-size: 1.6rem;
+}
+.main__about-me-text {
+  font-size: 1.6rem;
+}
+.main--home {
+  min-height: 100vh;
+}
+.main--about {
+  padding: 10rem 0;
+  width: 100%;
+}
+.main__about-text {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+.main__hero {
+  padding: 20rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@media only screen and (max-width: 50em) {
+  .main__hero {
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+}
+.main__text {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+}
+@media only screen and (max-width: 50em) {
+  .main__text {
+    width: 100%;
+    text-align: center;
+  }
+}
+.main__photo {
+  width: 48%;
+}
+@media only screen and (max-width: 50em) {
+  .main__photo {
+    width: 100%;
+  }
+}
+.main__btn:link, .main__btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--color-brown-1);
+  border: 2px solid var(--color-white);
+  padding: 1rem;
+  transition: all 0.2s;
+}
+@media only screen and (max-width: 50em) {
+  .main__btn:link, .main__btn:visited {
+    margin: 0 auto;
+  }
+}
+.main__btn:hover, .main__btn:active {
+  color: var(--color-white);
+  border: 2px solid var(--color-brown-1);
+}
+
+.footer {
+  padding: 6rem 0;
+  background-color: var(--color-black-2);
+  display: flex;
+  row-gap: 2rem;
+}
+.footer__main {
+  display: flex;
+}
+@media only screen and (max-width: 50em) {
+  .footer__main {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+}
+.footer__socials {
+  align-self: flex-end;
+  display: flex;
+  column-gap: 2rem;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 50em) {
+  .footer__socials {
+    align-self: center;
+    justify-content: center;
+  }
+}
+.footer__socials-link:link, .footer__socials-link:visited {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--color-white);
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.footer__socials-link:hover, .footer__socials-link:active {
+  transition: 0 -5rem;
+  opacity: 0.75;
+}
+.footer__socials-photo {
+  height: 100%;
+}
+
+.heading--1 {
+  font-size: 7rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 50em) {
+  .heading--1 {
+    text-align: center;
+  }
+}
+.heading__link:link, .heading__link:visited {
+  text-decoration: none;
+  color: var(--color-brown-2);
+  display: inline-block;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+.heading__link:hover, .heading__link:active {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+.heading--2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.heading--4 {
+  font-size: 1.8rem;
+}
+
+@keyframes bounce {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -5rem;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <ul class="header__menu container">
+        <li class="header__item">
+          <a href="index.html" class="header__link">Home</a>
+        </li>
+        <li class="header__item">
+          <a href="aboutme.html" target="_blank" class="header__link">
+            About me</a>
+        </li>
+      </ul>
+    </header>
+
+    <main class="main main--about">
+      <section class="container">
+        <div class="main__about">
+            <div class="main__about-personal">
+              <div class="main__about-text">
+                <h2 class="heading heading--2 heading--line">
+                  Personal Data
+                  <span class="main__line-design">&nbsp;</span>
+                </h2>
+                <div class="main__about-personal-box">
+                  <h4 class="heading heading--4">Fullname:</h4>
+                  <p class="main__about-personal-p">Joshua Cayabyab Daroya</p>
+                </div>
+                <div class="main__about-personal-box"><h4 class="heading heading--4">Birthdate:</h4>
+                  <p class="main__about-personal-p">September 2, 2003</p></div>
+                <div class="main__about-personal-box"><h4 class="heading heading--4">Address:</h4>
+                  <p class="main__about-personal-p">San Miguel Calasiao Pangasinan</p></div>
+                <div class="main__about-personal-box"><h4 class="heading heading--4">Gmail:</h4>
+                  <p class="main__about-personal-p">Joshuadaroya25@gmail.com</p></div>
+                <div class="main__about-personal-box"><h4 class="heading heading--4">Contact No:</h4>
+                  <p class="main__about-personal-p">09125343974</p></div>
+              </div>
+
+              <div class="main__about-photo"><img src="images/Picture.jpg" alt="personal image" class="main__about-img"></div>
+            </div>
+
+
+            <div class="main__about-me">
+              <h2 class="heading heading--2 heading--line">
+               About Me
+               <span class="main__line-design">&nbsp;</span>
+              </h2>
+              <p class="main__about-me-text">
+                I am an autodidact student  from Calasiao seeking to pursue my carrer, I'm currently first year   student tudying Bachelor of Science in Information Technology  Student in  Pangasinan State University San Carlos City and planning to specialize in Software Developer and Machine Learning and also I'm a person who works hard and is enthused, motivated by myself, dependable and responsible person. back when I was a kid. My first dream is to be an  Civil Engineer. My ultimate ambition is to construct a home that I will have designed by myself. But as time passed, I became aware that we could not support my aspiration of becoming an Engineer. I was sad but had to face reality. However, one day I will be very interested in downloading music and learning how to install and download things. Therefore,  now I love Programming.
+                
+              </p>
+            </div>
+
+            
+              <div class="main__about-skills">
+                <h2 class="heading heading--2 heading--line">
+                  Professional Skills
+                  
+                  <span class="main__line-design">&nbsp;</span>
+                </h2>
+  
+                <ul class="main__about-list">
+                  <li class="heading heading--4">Detail-Oriented</li>
+                  <li class="heading heading--4">Team Leader</li>
+                  <li class="heading heading--4">Character Excellent</li>
+                  <li class="heading heading--4">Critical Thinking</li>
+                  <li class="heading heading--4">Time Management</li>
+                </ul>
+              </div>
+        </div>
+
+        <div class="main__interest-box">
+          <h2 class="heading heading--2 heading--line">
+            Interests
+            <span class="main__line-design">&nbsp;</span>
+          </h2>
+          <div class="main__interest-list">
+            <div class="main__interest main__interest--1">
+              <div class="main__interest-icon"><img src="images/netflix.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+                Watching movies
+              </h4>
+            </div>
+            <div class="main__interest main__interest--2">
+              <div class="main__interest-icon"><img src="images/display.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+               Online games
+              </h4>
+            </div>
+            <div class="main__interest main__interest--3">
+              <div class="main__interest-icon"><img src="images/pencil2.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+                Drawing
+              </h4>
+            </div>
+            <div class="main__interest main__interest--4">
+              <div class="main__interest-icon"><img src="images/shuttlecock.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+                Badminton
+              </h4>
+            </div>
+            <div class="main__interest main__interest--5">
+              <div class="main__interest-icon"><img src="images/strategy.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+                Chess
+              </h4>
+            </div>
+            <div class="main__interest main__interest--6">
+              <div class="main__interest-icon"><img src="images/spotify.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+                Listening to music
+              </h4>
+            </div>
+            <div class="main__interest main__interest--7">
+              <div class="main__interest-icon"><img src="images/mobile.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+                Browsing internet
+              </h4>
+            </div>
+            <div class="main__interest main__interest--8">
+              <div class="main__interest-icon"><img src="images/laptop.svg" alt="Icon" class="main__interest-img"></div>
+              <h4 class="heading heading--4">
+               Coding
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+       
+        <div class="footer__main">
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/joshuadaroya125" target="_blank" class="footer__socials-link">
+                <img src="images/icon-facebook.svg" alt="Soc med logo" class="footer__socials-photo"></img>
+            </a>
+            <a href="https://twitter.com/JoshuaDenji"  target="_blank" class="footer__socials-link">
+                <img src="images/icon-twitter.svg" alt="Soc med logo" class="footer__socials-photo"></img>
+            </a>
+            <a href="https://www.instagram.com/itzjosshuaa/"  target="_blank" class="footer__socials-link">
+                <img src="images/icon-instagram.svg" alt="Soc med logo" class="footer__socials-photo"></img>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
